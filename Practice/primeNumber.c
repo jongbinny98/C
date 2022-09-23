@@ -6,36 +6,34 @@
 
 int main()
 {
-    int p;
-    int i;
-
-    int primes[50] = { 0 };
-    int primeIndex = 2;
-
-    bool isPrime;
-
-    // hardcode prime numbers
-    primes[0] = 2;
+    int primes[50] = {0};
+    int primesIndex = 2;
+    
+    //hardcode prime number
+    primes[0] = 1;
     primes[1] = 3;
 
-    for (p = 5; p <= 100; p = p + 2)
+    bool x;
+
+    for (int p = 5; p <= 100; p = p + 2)
     {
-        isPrime = true;
-
-        for (i = 1; isPrime && p / primes[i] >= primes[i]; ++i)
+        x = true;
+        
+        /* if primes^2 is less than p(odd number) 
+        -> checking if odd number is primes^2 or greater than compare with next prime number */
+        for (int i = 1; x && p / primes[i] >= primes[i]; i++)
             if (p % primes[i] == 0)
-                isPrime = false;
+                x = false;
 
-        if (isPrime == true)
+        if (x == true)
         {
-            primes[primeIndex] = p;
-            ++primeIndex;
+            primes[primesIndex] = p;
+            primesIndex++;
         }
     }
+    for (int i = 0; i < primesIndex; i++)
+        printf("%i ", primes[i]);
 
-    for (i = 0;  i < primeIndex;  ++i)
-         printf("%i  ", primes[i]);
-
-    printf("\n");
     return 0;
 }
+
