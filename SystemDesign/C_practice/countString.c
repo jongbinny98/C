@@ -25,8 +25,4 @@ int main()
     printf("\nYour string contained %d letters, %d digits, %d punctuation character", nLetter, nDigits, nPunct);
 
     return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a34691e7b2dc1fd5aa686446eff49db9f2621586
