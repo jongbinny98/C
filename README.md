@@ -9,6 +9,7 @@ Key Project:
 Small Building Network Design:
 Built a sample network for a four-story building using subnets and switches.
 Designed and implemented a firewall to manage traffic, allowing or blocking protocols based on specified restrictions (TCP, UDP, ICMP, ARP).
+
 🖥️ CSE130: Computer Systems Design
 This course bridged networking concepts with practical server development, where I:
 
